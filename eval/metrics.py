@@ -56,5 +56,70 @@ def canonical(value) -> str:
     return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
 
 
+def _reference(task) -> dict:
+    """The task's reference, from a golden task (an object with .reference) or a dict."""
+    ref = task.get("reference") if isinstance(task, dict) else getattr(task, "reference", None)
+    if not ref or "calls" not in ref or "tools" not in ref:
+        raise ValueError("the task has no reference {calls, tools}")
+    return ref
+
+
+def _identifiers(call: dict) -> list[str]:
+    """A read's identifiers: the paths it returned, or else the plain values in its input."""
+    paths = [str(p) for p in call.get("paths") or [] if p]
+    if paths:
+        return paths
+    out = []
+    for value in (call.get("input") or {}).values():
+        if isinstance(value, (list, tuple)):
+            out.extend(str(v) for v in value if v is not None)
+        elif value is not None and not isinstance(value, dict):
+            out.append(str(value))
+    return out
+
+
+def _appears(identifier: str, text: str) -> bool:
+    """Whether an identifier of three characters or more appears in text, ignoring case;
+    a path also appears when its file name alone does."""
+    identifier, text = identifier.lower(), text.lower()
+    if len(identifier) < 3:
+        return False
+    if identifier in text:
+        return True
+    name = identifier.rsplit("/", 1)[-1]
+    return "/" in identifier and len(name) >= 3 and name in text
+
+
 def metrics(lines: list[dict], task) -> dict:
-    raise NotImplementedError("Part B, task 4")
+    ref = _reference(task)
+    calls = [line for line in lines if line.get("type") == "tool_call"]
+    expected = set(ref["tools"])
+    used = {c["name"] for c in calls}
+
+    seen, repeats = set(), 0
+    for c in calls:
+        key = (c["name"], canonical(c.get("input")))
+        repeats += key in seen
+        seen.add(key)
+
+    comments = [c for c in calls if c["name"] in COMMENT_WRITES]
+    final = str((comments[-1].get("input") or {}).get("body") or "") if comments else ""
+    orphans = 0
+    for i, c in enumerate(calls):
+        if c["name"] in WRITES:
+            continue
+        later = " ".join(canonical(d.get("input")) for d in calls[i + 1:]) + " " + final
+        orphans += not any(_appears(x, later) for x in _identifiers(c))
+
+    ends = [line for line in lines if line.get("type") == "run_end"]
+    end = ends[-1] if ends else {}
+    return {
+        "step_count": len(calls) - int(ref["calls"]),
+        "precision": len(used & expected) / len(used) if used else None,
+        "recall": len(used & expected) / len(expected) if expected else 1.0,
+        "repeats": repeats,
+        "orphans": orphans,
+        "no_tools": not calls,
+        "cost_usd": float((end.get("totals") or {}).get("cost_usd") or 0.0),
+        "latency_s": float(end.get("elapsed_s") or 0.0),
+    }
