@@ -1,0 +1,61 @@
+id,label,reason
+j01,fail,"says src/api/errors.ts turns a ZodError into a 400 with field details, but the run never read errors.ts"
+j02,fail,"puts DAY_FIRST on line 41 of src/util/dates.ts; in the file it read, DAY_FIRST is on line 18"
+j03,fail,"says parseStatement is called from previewStatement, a name that appears nowhere in the issue or tool results"
+j04,fail,reports a CI run of a test in src/reports.test.ts; no tool ran tests and that file was never returned
+j05,pass,"the skip is in rollup.ts and the Monday 08:00 wording is in ARCHITECTURE.md, both read"
+j06,pass,"fieldErrors comes from errors.ts, which it read; where Zod files unknown keys is general library behaviour"
+j07,pass,"both schemas and z.string().email() are in auth.ts, which it read; the Forgot password form is in the issue"
+j08,pass,"every limit it lists (120, 50, 60, 20) is in src/api/reports.ts, which it read"
+j09,pass,"the plain split of the header, splitFields and the required columns are all in parser.ts, which it read"
+j10,pass,file.originalname and GET /uploads/:id are in what it read and the issue; multer decoding names as latin1 is general library behaviour
+j11,pass,"totalsBetween across all user accounts, the category filter and 212 vs 140 are all in what it read or the issue; the account guess is marked as likely"
+j12,fail,"says the suite in test/reports.test.ts passes, but no tool ran tests and that file was never returned"
+j13,fail,quotes a console TypeError after a drop that is in neither the issue nor any tool result
+j14,pass,"the two schemas without a trim are in auth.ts, which it read; the iPhone suggestion bar is in the issue"
+j15,pass,"health.ts, which it read, checks only db and queue"
+j16,pass,"processJob, claimNext and the job-row lock are in worker.ts and queue.ts, which it read; the timings are in the thread"
+j17,pass,"readFileConfig returning {} and the config/app.yaml default are in config.ts, which it read"
+j18,fail,"says GET /reports feeds the dashboard's recent list, which nothing it read shows and the thread contradicts; the report id being a random UUID is not in the evidence either"
+j19,pass,"readFileConfig and the explicit APP_CONFIG case are in config.ts, which it read"
+j20,fail,"says the readiness check is at the root of the API; health.ts only shows a route relative to its router, and nothing shows where it is mounted"
+j21,fail,"quotes an import log line (expected 4 fields, got 2 at row 14) that is in neither the issue nor any tool result"
+j22,fail,"says exports go out at 07:00 UTC; scheduler.ts, which it read, sets RUN_HOUR_UTC = 6"
+j23,fail,"says parsePage rejects a pageSize above 100; pagination.ts, which it read, clamps it to 100 with Math.min"
+j24,pass,"PREVIEW_ROWS = 50, the date-then-id order and the 50-row line in docs/API.md are all in what it read"
+j25,fail,"says what docs/API.md lists as date formats, but no tool ever returned docs/API.md"
+j26,pass,"dedupeKey joining the raw description is in dedupe.ts, which it read; precomposed and combining accents are general Unicode knowledge"
+j27,pass,"amountFormat setting the Amount cell format is in xlsx.ts, which it read; the red format string is a proposal"
+j28,pass,"the Monday 08:00 wording and the skip for empty weeks are in ARCHITECTURE.md and rollup.ts, both read"
+j29,fail,quotes a stored upload error (Unterminated quoted field at row 2) that is in neither the issue nor any tool result
+j30,pass,"the top-of-hour tick, isRollupDue and the startOfWeek TODO are in rollup.ts and dates.ts, both read; the zones are in the issue"
+j31,fail,"says formatMinor writes a comma as the decimal mark, but the run never read src/util/money.ts, where formatMinor is"
+j32,pass,"the Uploads section is in docs/API.md and parseAmount is in money.ts, both read; the rest is what it did"
+j33,pass,"amountFormat setting each Amount cell's format is in xlsx.ts, which it read; the red section is a proposal"
+j34,fail,puts the hard-coded word on line 11 of src/report.tsx; in the file it read it is on line 8
+j35,pass,the regex in parseAmount and errors.badAmount in schema.ts are both in files it read
+j36,pass,"UploadForm.tsx, which it read, has only a file picker and no drop handling"
+j37,fail,"says the health endpoint answers 401 with missing bearer token; health.ts, which it read, has no auth check, and no tool returned that response"
+j38,pass,"the PATCH reschedule on schedule and nextRunAt adding 7 days at RUN_HOUR_UTC 6 are in reports.ts and scheduler.ts, both read"
+j39,pass,"the hard-coded recipients after deliveredTo.length is in report.tsx, which it read"
+j40,fail,quotes a maintainer saying resending a schedule should never move the run day; no such words are in the issue or any tool result
+j41,fail,"says src/components/ReportForm.tsx checks the name limit, but no tool ever returned that file"
+j42,pass,"err.flatten().fieldErrors is in errors.ts, which it read; Zod putting pathless errors under formErrors is general library behaviour"
+j43,pass,"the fr.json keys came back in its search, and the call without a locale and the en default are in files it read"
+j44,pass,"toPage's four fields and the pageCount helper are in pagination.ts, which it read"
+j45,pass,"Fermer came back in its search, and the t() call without a locale is in Toast.tsx, which it read"
+j46,fail,says the account has 312 imported CLP rows stored with the rounding; no tool returned any stored data or count
+j47,fail,"says parseAmount already accepts a trailing minus; money.ts, which it read, only handles a leading minus"
+j48,fail,quotes a maintainer on an earlier request about empty exports; no such words are in the issue or any tool result
+j49,fail,"cites docs/PERFORMANCE.md, a file no tool ever returned"
+j50,pass,"the comma hard-coded in toDelimited and escapeField is in exportUtils.ts, which it read"
+j51,pass,"totalsBetween joining accounts on user_id and grouping by currency is in transactionRepo.ts, which it read; the 212 split is marked as likely"
+j52,pass,"Fermer came back in its search, and the label set without a locale is in Toast.tsx, which it read"
+j53,pass,"the Uploads section and parseAmount are in docs/API.md and money.ts, both read; the rest is what it did"
+j54,pass,"processJob, startWorker's loops and the missing lock are in worker.ts, which it read; the ten seconds and the test account are in the issue"
+j55,fail,says uploads made with a bad key are kept in a quarantine folder; no tool returned anything about that
+j56,pass,"the date|amount|description key, first row kept, and the overlap purpose are in dedupe.ts, which it read"
+j57,pass,"PREVIEW_ROWS 50, MAX_EXPORT_ROWS 100_000 and the newest-first sort are in what it read; 6,400 is in the issue"
+j58,pass,"fr.json, which it read, has both keys, and the call without a locale is in scheduler.ts, which it read"
+j59,fail,"says the parser already exports a DEFAULT_DELIMITER constant; parser.ts, which it read, has no such name"
+j60,pass,file.originalname and GET /uploads/:id are in what it read and the issue; UTF-8 read as latin1 is general knowledge that fits the mojibake in the issue
