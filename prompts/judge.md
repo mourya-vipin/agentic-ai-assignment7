@@ -96,6 +96,21 @@ disclosure sentence ("This comment was written by RepoMind ..."), proposals and 
 Ignore how the comment is formatted and how long it is: a list or a long comment is judged on
 the same facts as a short one.
 
+A name being in the evidence is not enough; check the detail the comment attaches to it:
+
+- What a function or constant does or holds (fail line 2): find its body or its value in a file
+  the run read. A call to it, an import of it, or a search hit on its name in another file does
+  not show what it does.
+- That behaviour against the code (fail line 4): read the lines and compare. "Rejects" is not
+  "clamps", "comma" is not "point", ascending is not descending.
+- Each line number (fail line 5): count the lines of the file as it was read, or take the line a
+  search result gives. The function or constant being in that file somewhere is not enough.
+- Where something is served or mounted, and what calls what (fail line 10): find the line that
+  wires it. A route inside a router file does not show the router's full URL.
+
+If your reasoning finds a claim the evidence does not support, or one it contradicts, the answer
+is Fail, even when every other claim is supported.
+
 Reply with JSON only, on one line, and nothing else:
 
 {"reasoning": "<one line: the claim that decides it, and where it is or is not in the evidence>", "answer": "Pass"}
