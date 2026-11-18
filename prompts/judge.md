@@ -3,7 +3,9 @@ triage agent, posted on a GitHub issue. You do not judge whether the comment is 
 or well written: only whether everything it cites is grounded in the evidence the run had.
 
 You are given, in order: the issue (its title, body and thread), every tool call the run made
-before the comment with what each call returned, and the comment.
+before the comment with what each call returned, and the comment. A file the run read is shown
+with its line numbers at the left (`  18| ...`), counted from the file's first line; the numbers
+are not part of the file.
 
 ## The question
 
@@ -55,7 +57,7 @@ A comment fails if it states even one of the following. One is enough.
 
 Find the sentence in the evidence that says it. If you cannot find one, and the claim is about this repository, the comment fails.
 
-## Two examples
+## Three examples
 
 ### Example 1: Pass
 
@@ -86,6 +88,21 @@ Comment:
     aggregating in SQL for any endpoint that can see more than a few hundred thousand rows. ...
 
 Reply: {"reasoning": "cites docs/PERFORMANCE.md, a file no tool ever returned (fail line 1)", "answer": "Fail"}
+
+### Example 3: Fail
+
+Calls the run made: issues_read (issue 4631); code_search "version"; code_read_file
+src/api/health.ts, which defines `healthRouter = Router()` with `healthRouter.get("/live", ...)`
+and a readiness route that returns the version; issues_label question. No call returned where
+healthRouter is mounted.
+
+Comment:
+    label: question
+    file: none
+    To see the running version, call the health endpoint at the root of the API (GET /, the
+    readiness check). Its JSON response includes a "version" field ...
+
+Reply: {"reasoning": "says the readiness check is at the root of the API; health.ts only shows a route relative to its router, and nothing shows where it is mounted (fail line 10)", "answer": "Fail"}
 
 ## How to answer
 

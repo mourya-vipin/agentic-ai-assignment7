@@ -156,6 +156,21 @@ def recorded_items(root: Path = ROOT) -> dict[str, dict]:
     return out
 
 
+FILE_HEADER = re.compile(r"^\S+ \([\d,]+ characters\)\s*$")
+
+
+def numbered(ev: dict) -> str:
+    """A tool result as the judge sees it. A file read gets its line numbers at the left,
+    counted from the file's first line, the line after the read's header (the same count
+    eval/find_evidence.py shows), so that a line number in a comment can be checked
+    without counting by hand (the criterion's pass line 3, fail line 5)."""
+    text = str(ev.get("result") or "").strip()
+    lines = text.splitlines()
+    if ev.get("tool") != "code_read_file" or not lines or not FILE_HEADER.match(lines[0]):
+        return text
+    return "\n".join([lines[0]] + [f"{n:4}| {line}" for n, line in enumerate(lines[1:], 1)])
+
+
 def render(item: dict, comment: str | None = None) -> str:
     """The judge's user message: the issue, the calls and what they returned, the comment."""
     issue = item.get("issue") or {}
@@ -163,7 +178,7 @@ def render(item: dict, comment: str | None = None) -> str:
              "", "# The tool calls the run made before the comment, in order, with what each returned", ""]
     for k, ev in enumerate(item.get("evidence") or [], 1):
         parts += [f"## Call {k}: {ev.get('tool')} {json.dumps(ev.get('input'), ensure_ascii=False)}", "",
-                  str(ev.get("result") or "").strip(), ""]
+                  numbered(ev), ""]
     if not item.get("evidence"):
         parts += ["(no tool calls)", ""]
     parts += ["# The comment", "", (comment if comment is not None else str(item.get("comment") or "")).strip(), "",

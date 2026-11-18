@@ -1,0 +1,38 @@
+  j10                              pass  multer, file.originalname, and src/api/uploads.ts are in the evidence from reading the fil
+  j20                              pass  src/api/health.ts shows GET / readiness check returning version: VERSION and GET /live ret
+  j21                              fail  the comment states the import log reads `IngestError: expected 4 fields, got 2 at row 14`,
+  j23                              fail  parsePage clamps pageSize with Math.min rather than rejecting it, which contradicts the co
+  j24                              pass  transactionRepo.listForReport orders by date, id ascending, which explains the earliest 50
+  j42                              pass  err.flatten(), formErrors, and fieldErrors are supported by src/api/errors.ts line 48 and 
+  j44                              pass  toPage, its returned fields, and pageCount helper are in src/util/pagination.ts, which was
+  j49                              fail  cites docs/PERFORMANCE.md, a file no tool ever returned (fail line 1)
+  j01                              fail  src/api/errors.ts is mentioned in the comment but no tool returned it (fail line 1)
+  j02                              pass  Every factual claim in the comment about src/util/dates.ts and DAY_FIRST is supported by t
+  j06                              pass  err.flatten().fieldErrors and ZodError handling are in src/api/errors.ts which was read, a
+  j07                              pass  z.string().email() is in src/api/auth.ts lines 27 and 32, and pr-15 is what pulls_open ret
+  j08                              pass  all facts in the comment (name 1-120 chars, up to 50 categories of 1-60 chars, 1-20 recipi
+  j13                              fail  cites browser behavior and a console error message not present in the issue or any tool re
+  j15                              pass  src/api/health.ts and its readiness check were read in tool call 4, and pr-50 is what pull
+  j16                              pass  the comment cites worker.ts, queue.ts, dedupe logic, and pr-46, all of which are grounded 
+  j17                              pass  readFileConfig and its silent fallback to {} are in src/config.ts which was read; pr-33 is
+  j19                              pass  readFileConfig and its code returning {} when the file doesn't exist are in src/config.ts 
+  j25                              fail  cites docs/API.md, a file no tool ever returned
+  j29                              fail  cites the error message `Unterminated quoted field at row 2`, but the code throws `errors.
+  j30                              pass  all claims about rollup scheduler, startRollupSchedule, isRollupDue, the time zones, and s
+  j31                              fail  formatMinor is not read or shown in the evidence, making the claim about it unsupported (f
+  j35                              pass  parseAmount, its regex, and errors.badAmount in schema.ts are all present in the read file
+  j37                              fail  The comment claims the health endpoint answers 401 with '{"error": "missing bearer token"}
+  j38                              pass  src/api/reports.ts and its PATCH handler recomputing nextRunAt on schedule are supported b
+  j43                              pass  fr.json having email.export strings is supported by search results, runScheduledExport cal
+  j47                              fail  cites "75-" in parseAmount, but parseAmount does not check trailing minus; it checks accou
+  j48                              fail  the comment references an earlier request about empty exports that is not in the issue or 
+  j50                              pass  toDelimited, escapeField, and hard-coded comma separator are in src/exportUtils.ts which w
+  j51                              pass  totalsBetween and listForReport are in transactionRepo.ts which was read; user_id, account
+  j52                              pass  the claim that Toast.tsx sets aria-label with t("ui.toast.dismiss") and no locale is suppo
+  j55                              fail  cites quarantine folder which appears nowhere in the issue or tool results
+  j57                              pass  The comment claims rows are ordered by date ascending in listForReport, but src/db/repos/t
+  j59                              fail  the comment states that the parser already exports a DEFAULT_DELIMITER constant, but no su
+eval/judge/tuning/round_2.jsonl: 34 judged now
+  examples: TPR 1.000, TNR 0.750
+  tuning: TPR 1.000, TNR 0.909
+  disagreements with your labels: j20, j02
