@@ -1,0 +1,25 @@
+id: g4630
+kind: single
+issues:
+- 4630
+stratum: routine
+decision: act
+expect:
+  comment:
+    label: feature
+    file: src/util/dates.ts
+  labels:
+  - feature
+  pr: draft
+source: parseStatementDate in src/util/dates.ts reads only four-digit years, and the reporter asks for a new format; docs/triage-runbook.md labels a new format a feature.
+runs:
+- agent-issue-4630-s01-396d87
+reference:
+  calls: 6
+  tools:
+  - issues_read
+  - code_search
+  - code_read_file
+  - issues_label
+  - pulls_open
+  - issues_comment

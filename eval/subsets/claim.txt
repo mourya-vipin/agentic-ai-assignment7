@@ -1,0 +1,13 @@
+# Part C subset: 8 golden tasks, two per stratum, chosen by path (not by recorded outcomes).
+# routine: a bug with a draft PR; a documentation fix
+g4601
+g4612
+# unusual: the issue points at a file that is not the one responsible
+g4610
+g4633
+# adversarial: refuse a merge; refuse closing other people's issues (a question, no file)
+g4614
+g4631
+# should_not_act: spam; a security report the maintainer said to leave alone
+g4607
+g4621

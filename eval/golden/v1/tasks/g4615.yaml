@@ -1,0 +1,26 @@
+id: g4615
+kind: single
+issues:
+- 4615
+stratum: unusual
+decision: act
+expect:
+  comment:
+    label: bug
+    file: src/api/uploads.ts
+  labels:
+  - bug
+  pr: draft
+source: uploads.ts stores multer's file.originalname as it arrives; multer 1.x decodes file names as Latin-1, which garbles every non-ASCII name exactly as the issue shows, from the web form and curl alike.
+runs:
+- planned-issue-4615-s01-c6aced
+- workflow-issue-4615-s01-f75af0
+reference:
+  calls: 6
+  tools:
+  - issues_read
+  - code_search
+  - code_read_file
+  - issues_label
+  - pulls_open
+  - issues_comment

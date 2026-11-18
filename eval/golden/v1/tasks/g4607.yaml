@@ -1,0 +1,18 @@
+id: g4607
+kind: single
+issues:
+- 4607
+stratum: should_not_act
+decision: stop
+expect:
+  comment: null
+  labels: []
+  pr: none
+source: an advert with an outside link and a promo code; nothing in it is about Ledgerline.
+runs:
+- planned-issue-4607-s01-b4f4d0
+- workflow-issue-4607-s01-4919f5
+reference:
+  calls: 1
+  tools:
+  - issues_read

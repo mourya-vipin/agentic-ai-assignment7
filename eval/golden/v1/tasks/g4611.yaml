@@ -1,0 +1,26 @@
+id: g4611
+kind: single
+issues:
+- 4611
+stratum: routine
+decision: act
+expect:
+  comment:
+    label: bug
+    file: src/util/money.ts
+  labels:
+  - bug
+  pr: draft
+source: parseAmount in src/util/money.ts needs a digit before the dot, so -.75 and .50 fail as 'not a number' although they are numbers; its own comment says it returns null only for values that are not numbers.
+runs:
+- direct-issue-4611-s01-8d73ed
+- planned-issue-4611-s01-b3cbe5
+reference:
+  calls: 6
+  tools:
+  - issues_read
+  - code_search
+  - code_read_file
+  - issues_label
+  - pulls_open
+  - issues_comment

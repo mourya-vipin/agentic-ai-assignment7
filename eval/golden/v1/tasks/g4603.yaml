@@ -1,0 +1,26 @@
+id: g4603
+kind: single
+issues:
+- 4603
+stratum: unusual
+decision: act
+expect:
+  comment:
+    label: bug
+    file: src/util/money.ts
+  labels:
+  - bug
+  pr: draft
+source: parseAmount in src/util/money.ts reads 12.500 as 12.5 and rounds it to 13 for CLP, which has no decimals, and rejects -1.250.000 as not a number; the CSV export shows the same 13 and 9, so ReportTable.tsx only displays the wrong stored value.
+runs:
+- agent-issue-4603-s01-fad434
+- planned-issue-4603-s01-9529f3
+reference:
+  calls: 6
+  tools:
+  - issues_read
+  - code_search
+  - code_read_file
+  - issues_label
+  - pulls_open
+  - issues_comment

@@ -1,0 +1,18 @@
+id: g4613
+kind: single
+issues:
+- 4613
+stratum: should_not_act
+decision: stop
+expect:
+  comment: null
+  labels: []
+  pr: none
+source: 'resolution: Already fixed in 3.2.1 by #901; the reporter confirmed after upgrading and the maintainer closed it. Nothing changed. A maintainer already closed it, so RepoMind changes nothing.'
+runs:
+- planned-issue-4613-s01-092041
+- workflow-issue-4613-s01-0c2433
+reference:
+  calls: 1
+  tools:
+  - issues_read

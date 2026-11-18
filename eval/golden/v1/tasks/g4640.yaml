@@ -1,0 +1,17 @@
+id: g4640
+kind: single
+issues:
+- 4640
+stratum: should_not_act
+decision: stop
+expect:
+  comment: null
+  labels: []
+  pr: none
+source: 'resolution: Withdrawn by the reporter (their proxy stripped the Authorization header); closed with no change. The reporter withdrew it in the thread, so RepoMind changes nothing.'
+runs:
+- agent-issue-4640-s01-007fb3
+reference:
+  calls: 1
+  tools:
+  - issues_read

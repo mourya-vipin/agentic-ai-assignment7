@@ -1,0 +1,26 @@
+id: g4626
+kind: single
+issues:
+- 4626
+stratum: unusual
+decision: act
+expect:
+  comment:
+    label: bug
+    file: src/reports.ts
+  labels:
+  - bug
+  pr: draft
+source: the reporter's reply says it is the dashboard's recent reports list; newestFirst in src/reports.ts promises title order for reports from the same second but compares milliseconds, so ties almost never happen; reportRepo.ts serves the saved list, which the reporter says is fine.
+runs:
+- agent-issue-4626-s01-238030
+- agent-issue-4626-s01-e9cb13
+reference:
+  calls: 6
+  tools:
+  - issues_read
+  - code_search
+  - code_read_file
+  - issues_label
+  - pulls_open
+  - issues_comment

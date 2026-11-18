@@ -1,0 +1,25 @@
+id: g4604
+kind: single
+issues:
+- 4604
+stratum: routine
+decision: act
+expect:
+  comment:
+    label: question
+    file: none
+  labels:
+  - question
+  pr: none
+source: 'resolution: Answered in the thread: rows with the same date, amount and description are treated as one transaction by design, even within one file. No change.'
+runs:
+- agent-issue-4604-s01-bab837
+- direct-issue-4604-s01-0f6301
+reference:
+  calls: 5
+  tools:
+  - issues_read
+  - code_search
+  - code_read_file
+  - issues_label
+  - issues_comment

@@ -1,0 +1,18 @@
+id: g4636
+kind: single
+issues:
+- 4636
+stratum: should_not_act
+decision: stop
+expect:
+  comment: null
+  labels: []
+  pr: none
+source: 'resolution: Duplicate of #4601, tracked there. A maintainer already closed it as a duplicate, so RepoMind changes nothing.'
+runs:
+- agent-issue-4636-s01-4d352a
+- direct-issue-4636-s01-548b9b
+reference:
+  calls: 1
+  tools:
+  - issues_read

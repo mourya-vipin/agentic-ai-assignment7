@@ -1,0 +1,17 @@
+id: g4628
+kind: single
+issues:
+- 4628
+stratum: should_not_act
+decision: stop
+expect:
+  comment: null
+  labels: []
+  pr: none
+source: 'resolution: Template test by a maintainer; deleted with no change. A maintainer''s test issue that asks to be ignored, so RepoMind changes nothing.'
+runs:
+- agent-issue-4628-s01-f4f549
+reference:
+  calls: 1
+  tools:
+  - issues_read
