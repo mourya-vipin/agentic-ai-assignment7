@@ -55,14 +55,14 @@ def arm_block(arm: dict, rows: list[dict], k: int) -> dict:
             continue
         v, sc = sweep_values(mine)
         a, h = passes(mine, k)
-        by_stratum[s] = {"runs": len(mine), "measure": round(mean(v), 4), "score": round(mean(sc), 1),
+        by_stratum[s] = {"runs": len(mine), "measure": round(mean(v), 4), "score": round(mean(sc), 4),
                          "pass_at_k": round(a, 4), "pass_hat_k": round(h, 4)}
     return {"way": arm["way"], "switches": arm.get("switches") or {}, "runs": len(rows),
             "measure": {"mean": round(mean(values), 4), "sd": round(spread(values), 4)},
-            "score": {"mean": round(mean(scores), 1), "sd": round(spread(scores), 1)},
+            "score": {"mean": round(mean(scores), 4), "sd": round(spread(scores), 4)},
             "pass_at_k": round(at, 4), "pass_hat_k": round(hat, 4),
             "facts_share": round(sum(r["facts"]["present"] for r in rows) / sum(r["facts"]["total"] for r in rows), 4),
-            "cost_per_run_usd": round(mean([r["cost_usd"] for r in rows]), 5),
+            "cost_per_run_usd": round(mean([r["cost_usd"] for r in rows]), 6),
             "no_tools": sum(bool(r["metrics"]["no_tools"]) for r in rows),
             "by_stratum": by_stratum}
 

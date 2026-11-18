@@ -1,0 +1,78 @@
+[notify live] planned-g4601-s01-6194ab: RepoMind is running on issue 4601; stop it with: bin/stop planned-g4601-s01-6194ab
+[notify live] planned-g4607-s01-73f609: RepoMind is running on issue 4607; stop it with: bin/stop planned-g4607-s01-73f609
+[notify live] planned-g4610-s01-9c5211: RepoMind is running on issue 4610; stop it with: bin/stop planned-g4610-s01-9c5211
+[notify live] planned-g4612-s01-aea741: RepoMind is running on issue 4612; stop it with: bin/stop planned-g4612-s01-aea741
+[notify live] planned-g4614-s01-f088f8: RepoMind is running on issue 4614; stop it with: bin/stop planned-g4614-s01-f088f8
+[notify live] planned-g4621-s01-d8a325: RepoMind is running on issue 4621; stop it with: bin/stop planned-g4621-s01-d8a325
+[notify live] planned-g4631-s01-a49a5b: RepoMind is running on issue 4631; stop it with: bin/stop planned-g4631-s01-a49a5b
+[notify live] planned-g4633-s01-c95283: RepoMind is running on issue 4633; stop it with: bin/stop planned-g4633-s01-c95283
+[notify live] planned-g4601-s02-e8bf03: RepoMind is running on issue 4601; stop it with: bin/stop planned-g4601-s02-e8bf03
+[notify live] planned-g4607-s02-570c61: RepoMind is running on issue 4607; stop it with: bin/stop planned-g4607-s02-570c61
+[notify live] planned-g4610-s02-56c8d1: RepoMind is running on issue 4610; stop it with: bin/stop planned-g4610-s02-56c8d1
+[notify live] planned-g4612-s02-ad28e0: RepoMind is running on issue 4612; stop it with: bin/stop planned-g4612-s02-ad28e0
+[notify live] planned-g4614-s02-626d80: RepoMind is running on issue 4614; stop it with: bin/stop planned-g4614-s02-626d80
+[notify live] planned-g4621-s02-1fb0e2: RepoMind is running on issue 4621; stop it with: bin/stop planned-g4621-s02-1fb0e2
+[notify live] planned-g4631-s02-29a55d: RepoMind is running on issue 4631; stop it with: bin/stop planned-g4631-s02-29a55d
+[notify live] planned-g4633-s02-fb3938: RepoMind is running on issue 4633; stop it with: bin/stop planned-g4633-s02-fb3938
+[notify live] planned-g4601-s03-51f90b: RepoMind is running on issue 4601; stop it with: bin/stop planned-g4601-s03-51f90b
+[notify live] planned-g4607-s03-a6d2e3: RepoMind is running on issue 4607; stop it with: bin/stop planned-g4607-s03-a6d2e3
+[notify live] planned-g4610-s03-f1fe79: RepoMind is running on issue 4610; stop it with: bin/stop planned-g4610-s03-f1fe79
+[notify live] planned-g4612-s03-cbfbca: RepoMind is running on issue 4612; stop it with: bin/stop planned-g4612-s03-cbfbca
+[notify live] planned-g4614-s03-ca17b7: RepoMind is running on issue 4614; stop it with: bin/stop planned-g4614-s03-ca17b7
+[notify live] planned-g4621-s03-79aedc: RepoMind is running on issue 4621; stop it with: bin/stop planned-g4621-s03-79aedc
+[notify live] planned-g4631-s03-4fb82a: RepoMind is running on issue 4631; stop it with: bin/stop planned-g4631-s03-4fb82a
+[notify live] planned-g4633-s03-a82986: RepoMind is running on issue 4633; stop it with: bin/stop planned-g4633-s03-a82986
+planned-g4601-s01-6194ab            15,074 tok  $0.0087
+planned-g4607-s01-73f609            11,579 tok  $0.0075
+planned-g4610-s01-9c5211            22,631 tok  $0.0104
+planned-g4612-s01-aea741            20,131 tok  $0.0089
+planned-g4614-s01-f088f8            13,077 tok  $0.0082
+planned-g4621-s01-d8a325             9,192 tok  $0.0041
+planned-g4631-s01-a49a5b            14,407 tok  $0.0080
+planned-g4633-s01-c95283            13,022 tok  $0.0082
+planned-g4601-s02-e8bf03            11,001 tok  $0.0064
+planned-g4607-s02-570c61            13,144 tok  $0.0073
+planned-g4610-s02-56c8d1            11,587 tok  $0.0075
+planned-g4612-s02-ad28e0            12,456 tok  $0.0053
+planned-g4614-s02-626d80            12,931 tok  $0.0080
+planned-g4621-s02-1fb0e2            13,016 tok  $0.0061
+planned-g4631-s02-29a55d             9,709 tok  $0.0059
+planned-g4633-s02-fb3938            15,194 tok  $0.0070
+planned-g4601-s03-51f90b            13,270 tok  $0.0072
+planned-g4607-s03-a6d2e3            18,920 tok  $0.0091
+planned-g4610-s03-f1fe79            11,673 tok  $0.0076
+planned-g4612-s03-cbfbca            12,495 tok  $0.0053
+planned-g4614-s03-ca17b7            23,955 tok  $0.0125
+planned-g4621-s03-79aedc             7,792 tok  $0.0056
+planned-g4631-s03-4fb82a            12,623 tok  $0.0061
+planned-g4633-s03-a82986             5,691 tok  $0.0038
+
+24 runs, 324,570 tokens, $0.1745, 0 with errors
+=== planned exit 0
+agent-g4601-s01-a06dba              58,595 tok  $0.0125
+agent-g4607-s01-b29ff4              17,586 tok  $0.0039
+agent-g4610-s01-fe9216             100,065 tok  $0.0141
+agent-g4612-s01-340a06              94,665 tok  $0.0132
+agent-g4614-s01-733fea              47,034 tok  $0.0096
+agent-g4621-s01-dbd6b7              13,241 tok  $0.0032
+agent-g4631-s01-9a87fa              23,518 tok  $0.0053
+agent-g4633-s01-145c16              89,590 tok  $0.0126
+agent-g4601-s02-01e880              69,741 tok  $0.0122
+agent-g4607-s02-157624              17,603 tok  $0.0034
+agent-g4610-s02-17bb97              95,265 tok  $0.0161
+agent-g4612-s02-b09fb6              85,125 tok  $0.0146
+agent-g4614-s02-a55519              67,953 tok  $0.0122
+agent-g4621-s02-dcfb8f              13,226 tok  $0.0031
+agent-g4631-s02-812a88              42,005 tok  $0.0085
+agent-g4633-s02-b060f6              51,129 tok  $0.0092
+agent-g4601-s03-d8a3ed              70,873 tok  $0.0121
+agent-g4607-s03-d4db61              17,582 tok  $0.0034
+agent-g4610-s03-8dbb77              92,644 tok  $0.0140
+agent-g4612-s03-41b24c              87,523 tok  $0.0126
+agent-g4614-s03-03bec8              47,015 tok  $0.0090
+agent-g4621-s03-989230              13,262 tok  $0.0032
+agent-g4631-s03-51cb2a              23,472 tok  $0.0047
+agent-g4633-s03-df4394              51,787 tok  $0.0094
+
+24 runs, 1,290,499 tokens, $0.2221, 0 with errors
+=== agent exit 0

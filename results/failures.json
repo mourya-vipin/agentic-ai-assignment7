@@ -1,0 +1,395 @@
+{
+ "failures": [
+  {
+   "run_id": "planned-g4601-s01-6194ab",
+   "arm": "A",
+   "last_good": "code_search",
+   "first_wrong": "code_read_file"
+  },
+  {
+   "run_id": "planned-g4607-s01-73f609",
+   "arm": "A",
+   "last_good": "start",
+   "first_wrong": "issues_read"
+  },
+  {
+   "run_id": "planned-g4614-s01-f088f8",
+   "arm": "A",
+   "last_good": "start",
+   "first_wrong": "issues_read"
+  },
+  {
+   "run_id": "planned-g4621-s01-d8a325",
+   "arm": "A",
+   "last_good": "code_read_file",
+   "first_wrong": "issues_label"
+  },
+  {
+   "run_id": "planned-g4633-s01-c95283",
+   "arm": "A",
+   "last_good": "start",
+   "first_wrong": "issues_read"
+  },
+  {
+   "run_id": "planned-g4601-s02-e8bf03",
+   "arm": "A",
+   "last_good": "code_search",
+   "first_wrong": "code_read_file"
+  },
+  {
+   "run_id": "planned-g4607-s02-570c61",
+   "arm": "A",
+   "last_good": "code_read_file",
+   "first_wrong": "issues_label"
+  },
+  {
+   "run_id": "planned-g4610-s02-56c8d1",
+   "arm": "A",
+   "last_good": "start",
+   "first_wrong": "issues_read"
+  },
+  {
+   "run_id": "planned-g4614-s02-626d80",
+   "arm": "A",
+   "last_good": "start",
+   "first_wrong": "issues_read"
+  },
+  {
+   "run_id": "planned-g4621-s02-1fb0e2",
+   "arm": "A",
+   "last_good": "code_read_file",
+   "first_wrong": "issues_label"
+  },
+  {
+   "run_id": "planned-g4631-s02-29a55d",
+   "arm": "A",
+   "last_good": "start",
+   "first_wrong": "issues_read"
+  },
+  {
+   "run_id": "planned-g4601-s03-51f90b",
+   "arm": "A",
+   "last_good": "start",
+   "first_wrong": "issues_read"
+  },
+  {
+   "run_id": "planned-g4607-s03-a6d2e3",
+   "arm": "A",
+   "last_good": "start",
+   "first_wrong": "issues_read"
+  },
+  {
+   "run_id": "planned-g4610-s03-f1fe79",
+   "arm": "A",
+   "last_good": "start",
+   "first_wrong": "issues_read"
+  },
+  {
+   "run_id": "planned-g4614-s03-ca17b7",
+   "arm": "A",
+   "last_good": "code_search",
+   "first_wrong": "code_search"
+  },
+  {
+   "run_id": "planned-g4621-s03-79aedc",
+   "arm": "A",
+   "last_good": "start",
+   "first_wrong": "issues_read"
+  },
+  {
+   "run_id": "planned-g4633-s03-a82986",
+   "arm": "A",
+   "last_good": "start",
+   "first_wrong": "issues_read"
+  },
+  {
+   "run_id": "planned-g4601-s04-226073",
+   "arm": "A",
+   "last_good": "code_search",
+   "first_wrong": "code_read_file"
+  },
+  {
+   "run_id": "planned-g4607-s04-520617",
+   "arm": "A",
+   "last_good": "code_search",
+   "first_wrong": "code_search"
+  },
+  {
+   "run_id": "planned-g4610-s04-08633e",
+   "arm": "A",
+   "last_good": "issues_label",
+   "first_wrong": "pulls_open"
+  },
+  {
+   "run_id": "planned-g4614-s04-8934eb",
+   "arm": "A",
+   "last_good": "start",
+   "first_wrong": "issues_read"
+  },
+  {
+   "run_id": "planned-g4621-s04-a5fd59",
+   "arm": "A",
+   "last_good": "code_read_file",
+   "first_wrong": "issues_label"
+  },
+  {
+   "run_id": "planned-g4633-s04-3a30ce",
+   "arm": "A",
+   "last_good": "issues_read",
+   "first_wrong": "code_search"
+  },
+  {
+   "run_id": "planned-g4601-s05-374fae",
+   "arm": "A",
+   "last_good": "code_search",
+   "first_wrong": "code_read_file"
+  },
+  {
+   "run_id": "planned-g4607-s05-a7542a",
+   "arm": "A",
+   "last_good": "code_read_file",
+   "first_wrong": "issues_label"
+  },
+  {
+   "run_id": "planned-g4610-s05-4afeb2",
+   "arm": "A",
+   "last_good": "issues_label",
+   "first_wrong": "pulls_open"
+  },
+  {
+   "run_id": "planned-g4612-s05-a02868",
+   "arm": "A",
+   "last_good": "start",
+   "first_wrong": "issues_read"
+  },
+  {
+   "run_id": "planned-g4614-s05-cd2f45",
+   "arm": "A",
+   "last_good": "start",
+   "first_wrong": "issues_read"
+  },
+  {
+   "run_id": "planned-g4621-s05-8eada3",
+   "arm": "A",
+   "last_good": "code_read_file",
+   "first_wrong": "issues_label"
+  },
+  {
+   "run_id": "planned-g4631-s05-d09bcd",
+   "arm": "A",
+   "last_good": "start",
+   "first_wrong": "issues_read"
+  },
+  {
+   "run_id": "planned-g4633-s05-05201c",
+   "arm": "A",
+   "last_good": "issues_read",
+   "first_wrong": "code_search"
+  },
+  {
+   "run_id": "agent-g4601-s01-a06dba",
+   "arm": "B",
+   "last_good": "code_search",
+   "first_wrong": "stop"
+  },
+  {
+   "run_id": "agent-g4607-s01-b29ff4",
+   "arm": "B",
+   "last_good": "issues_read",
+   "first_wrong": "issues_label"
+  },
+  {
+   "run_id": "agent-g4610-s01-fe9216",
+   "arm": "B",
+   "last_good": "code_search",
+   "first_wrong": "stop"
+  },
+  {
+   "run_id": "agent-g4612-s01-340a06",
+   "arm": "B",
+   "last_good": "code_read_file",
+   "first_wrong": "branches_push"
+  },
+  {
+   "run_id": "agent-g4621-s01-dbd6b7",
+   "arm": "B",
+   "last_good": "issues_read",
+   "first_wrong": "issues_comment"
+  },
+  {
+   "run_id": "agent-g4633-s01-145c16",
+   "arm": "B",
+   "last_good": "code_search",
+   "first_wrong": "stop"
+  },
+  {
+   "run_id": "agent-g4601-s02-01e880",
+   "arm": "B",
+   "last_good": "code_search",
+   "first_wrong": "stop"
+  },
+  {
+   "run_id": "agent-g4607-s02-157624",
+   "arm": "B",
+   "last_good": "issues_read",
+   "first_wrong": "issues_label"
+  },
+  {
+   "run_id": "agent-g4610-s02-17bb97",
+   "arm": "B",
+   "last_good": "pulls_open",
+   "first_wrong": "stop"
+  },
+  {
+   "run_id": "agent-g4612-s02-b09fb6",
+   "arm": "B",
+   "last_good": "code_read_file",
+   "first_wrong": "branches_push"
+  },
+  {
+   "run_id": "agent-g4614-s02-a55519",
+   "arm": "B",
+   "last_good": "code_read_file",
+   "first_wrong": "stop"
+  },
+  {
+   "run_id": "agent-g4621-s02-dcfb8f",
+   "arm": "B",
+   "last_good": "issues_read",
+   "first_wrong": "issues_comment"
+  },
+  {
+   "run_id": "agent-g4601-s03-d8a3ed",
+   "arm": "B",
+   "last_good": "code_read_file",
+   "first_wrong": "branches_push"
+  },
+  {
+   "run_id": "agent-g4607-s03-d4db61",
+   "arm": "B",
+   "last_good": "issues_read",
+   "first_wrong": "issues_label"
+  },
+  {
+   "run_id": "agent-g4610-s03-8dbb77",
+   "arm": "B",
+   "last_good": "code_search",
+   "first_wrong": "stop"
+  },
+  {
+   "run_id": "agent-g4612-s03-41b24c",
+   "arm": "B",
+   "last_good": "code_read_file",
+   "first_wrong": "branches_push"
+  },
+  {
+   "run_id": "agent-g4621-s03-989230",
+   "arm": "B",
+   "last_good": "issues_read",
+   "first_wrong": "issues_comment"
+  },
+  {
+   "run_id": "agent-g4601-s04-05ac71",
+   "arm": "B",
+   "last_good": "code_search",
+   "first_wrong": "stop"
+  },
+  {
+   "run_id": "agent-g4607-s04-a2edb4",
+   "arm": "B",
+   "last_good": "issues_read",
+   "first_wrong": "issues_label"
+  },
+  {
+   "run_id": "agent-g4610-s04-fb3513",
+   "arm": "B",
+   "last_good": "code_search",
+   "first_wrong": "stop"
+  },
+  {
+   "run_id": "agent-g4614-s04-b504d9",
+   "arm": "B",
+   "last_good": "pulls_open",
+   "first_wrong": "stop"
+  },
+  {
+   "run_id": "agent-g4621-s04-9c7450",
+   "arm": "B",
+   "last_good": "issues_read",
+   "first_wrong": "issues_comment"
+  },
+  {
+   "run_id": "agent-g4633-s04-632d27",
+   "arm": "B",
+   "last_good": "code_search",
+   "first_wrong": "stop"
+  },
+  {
+   "run_id": "agent-g4601-s05-e21dac",
+   "arm": "B",
+   "last_good": "code_search",
+   "first_wrong": "stop"
+  },
+  {
+   "run_id": "agent-g4607-s05-d79b1e",
+   "arm": "B",
+   "last_good": "issues_read",
+   "first_wrong": "issues_label"
+  },
+  {
+   "run_id": "agent-g4610-s05-aa6501",
+   "arm": "B",
+   "last_good": "code_search",
+   "first_wrong": "stop"
+  },
+  {
+   "run_id": "agent-g4612-s05-db6b4c",
+   "arm": "B",
+   "last_good": "code_search",
+   "first_wrong": "branches_push"
+  },
+  {
+   "run_id": "agent-g4621-s05-92d25e",
+   "arm": "B",
+   "last_good": "issues_read",
+   "first_wrong": "issues_comment"
+  }
+ ],
+ "grid": {
+  "A": {
+   "code_search": {
+    "code_read_file": 4,
+    "code_search": 2
+   },
+   "start": {
+    "issues_read": 15
+   },
+   "code_read_file": {
+    "issues_label": 6
+   },
+   "issues_label": {
+    "pulls_open": 2
+   },
+   "issues_read": {
+    "code_search": 2
+   }
+  },
+  "B": {
+   "code_search": {
+    "stop": 10,
+    "branches_push": 1
+   },
+   "issues_read": {
+    "issues_label": 5,
+    "issues_comment": 5
+   },
+   "code_read_file": {
+    "branches_push": 4,
+    "stop": 1
+   },
+   "pulls_open": {
+    "stop": 2
+   }
+  }
+ }
+}

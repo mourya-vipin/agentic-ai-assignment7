@@ -1,0 +1,12 @@
+waiting until Wed Nov 18 02:10:00 CST 2026
+skipped 1 runs this way has finished on these tasks; --discard its runs first to measure it again
+agent-g4607-s05-d79b1e              17,592 tok  $0.0039
+agent-g4610-s05-aa6501              99,507 tok  $0.0144
+agent-g4612-s05-db6b4c              99,087 tok  $0.0144
+agent-g4614-s05-c7ca73              46,954 tok  $0.0095
+agent-g4621-s05-92d25e              13,212 tok  $0.0031
+agent-g4631-s05-dff9e6              23,498 tok  $0.0053
+agent-g4633-s05-ca2b7e              51,839 tok  $0.0100
+
+7 runs, 351,689 tokens, $0.0607, 0 with errors
+=== agent sweep 5 exit 0

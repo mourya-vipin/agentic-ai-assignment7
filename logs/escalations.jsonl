@@ -1,0 +1,8 @@
+{"at": "2026-11-18T04:20:20.725Z", "run_id": "planned-g4614-s01-f088f8", "signal": "blocked_three_times", "reached_reviewer": true, "capped": false, "cap": 5}
+{"at": "2026-11-18T04:21:15.309Z", "run_id": "planned-g4633-s01-c95283", "signal": "blocked_three_times", "reached_reviewer": true, "capped": false, "cap": 5}
+{"at": "2026-11-18T04:22:15.207Z", "run_id": "planned-g4610-s02-56c8d1", "signal": "blocked_three_times", "reached_reviewer": true, "capped": false, "cap": 5}
+{"at": "2026-11-18T04:23:04.376Z", "run_id": "planned-g4614-s02-626d80", "signal": "blocked_three_times", "reached_reviewer": true, "capped": false, "cap": 5}
+{"at": "2026-11-18T04:24:23.318Z", "run_id": "planned-g4610-s03-f1fe79", "signal": "blocked_three_times", "reached_reviewer": true, "capped": false, "cap": 5}
+{"at": "2026-11-18T05:26:01.050Z", "run_id": "planned-g4607-s04-520617", "signal": "blocked_three_times", "reached_reviewer": false, "capped": true, "cap": 5}
+{"at": "2026-11-18T05:27:25.512Z", "run_id": "planned-g4614-s04-8934eb", "signal": "blocked_three_times", "reached_reviewer": false, "capped": true, "cap": 5}
+{"at": "2026-11-18T05:30:11.300Z", "run_id": "planned-g4631-s05-d09bcd", "signal": "blocked_three_times", "reached_reviewer": false, "capped": true, "cap": 5}

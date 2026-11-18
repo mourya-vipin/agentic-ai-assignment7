@@ -1,0 +1,10 @@
+{
+ "attempted": "open_pr for step 5 of the plan on issue 4610: Open draft pull request",
+ "why_stopped": "step 2 failed 3 times",
+ "needs_from_human": "approve to try the step once more, or deny and the step is skipped",
+ "signal": "blocked_three_times",
+ "at": "2026-11-18T04:22:15.206Z",
+ "run_id": "planned-g4610-s02-56c8d1",
+ "issue": 4610,
+ "step": 5
+}
