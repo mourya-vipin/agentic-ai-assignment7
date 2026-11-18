@@ -1,0 +1,22 @@
+# Part C's bar, set after sweeps 1-3 and before any fourth sweep (checks/FORMATS.md, section 15.6).
+# s_a and s_b are each arm's SD of its per-sweep mean repeats over sweeps 1-3: a rough spread from
+# three sweeps. price_usd = n_needed x 2 arms x $0.0661, the mean cost of one sweep over both arms.
+claim: plan
+arm_a: {way: planned, switches: {}}
+arm_b: {way: agent, switches: {}}
+measure: repeats
+gain: B - A
+sweeps: 5
+s_a: 0.0722
+s_b: 0.0722
+delta: 0.25
+n_needed: 2
+price_usd: 0.26
+bar: 0.0
+group_floor: -0.5
+k: 3
+prediction:
+  arm: A
+  by: 0.05
+  stratum: unusual
+  why: "The plan runs each step once, so I expect slightly fewer repeats, but neither way repeated a call in 60 recorded runs, so the gap should be small, about 0.05, and largest on the unusual issues, where a wrong file sends the agent searching longest."
