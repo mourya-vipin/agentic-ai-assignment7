@@ -57,8 +57,12 @@ def canonical(value) -> str:
 
 
 def _reference(task) -> dict:
-    """The task's reference, from a golden task (an object with .reference) or a dict."""
-    ref = task.get("reference") if isinstance(task, dict) else getattr(task, "reference", None)
+    """The task's reference, from a golden task (an object with .reference), a task dict,
+    or the reference dict {calls, tools} itself."""
+    if isinstance(task, dict):
+        ref = task if "calls" in task and "tools" in task else task.get("reference")
+    else:
+        ref = getattr(task, "reference", None)
     if not ref or "calls" not in ref or "tools" not in ref:
         raise ValueError("the task has no reference {calls, tools}")
     return ref
