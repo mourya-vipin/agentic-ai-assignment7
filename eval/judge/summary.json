@@ -1,0 +1,55 @@
+{
+  "split": {
+    "examples": 8,
+    "tuning": 26,
+    "test": 26
+  },
+  "model": "gemini-3.5-flash-lite",
+  "tpr": 1.0,
+  "tnr": 0.8888888888888888,
+  "p": 1.0,
+  "corrected": 1.0,
+  "raw_corrected": 1.0,
+  "interval": [
+    1.0,
+    1.0
+  ],
+  "coin": false,
+  "flip_rate": 0.07692307692307693,
+  "flips": [
+    "j03",
+    "j53"
+  ],
+  "majority": {
+    "tpr": 1.0,
+    "tnr": 0.7777777777777778,
+    "kept": false
+  },
+  "moved_share": 0.07692307692307693,
+  "moved": [
+    "j03",
+    "j22"
+  ],
+  "by_system": {
+    "claude-haiku-5-5": {
+      "tpr": 1.0,
+      "tnr": 0.8,
+      "items": 12,
+      "passes": 7,
+      "fails": 5
+    },
+    "claude-sonnet-5-5": {
+      "tpr": 1.0,
+      "tnr": 1.0,
+      "items": 14,
+      "passes": 10,
+      "fails": 4
+    }
+  },
+  "test_counts": {
+    "passes": 17,
+    "fails": 9
+  },
+  "recorded": 20,
+  "prompt": "be02682d823b"
+}
