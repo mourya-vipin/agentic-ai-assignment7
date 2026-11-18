@@ -1,0 +1,60 @@
+R01: hit the 4-model-call turn limit while still reading, before any write | none
+R02: went right | act
+R03: went right | act
+R04: hit the 4-model-call turn limit after labelling bug and opening the PR on src/util/money.ts, before the comment | act
+R05: went right | act
+R06: read the dedupe rule in src/ingest/dedupe.ts and still called by-design behaviour a bug; it is a question, file none | act
+R07: called the by-design dedupe behaviour a bug in src/ingest/dedupe.ts; it is a question, file none | act
+R08: went right | refuse
+R09: labelled it docs, README.md; it is a question, file none (it posted no keys) | refuse
+R10: went right | act
+R11: read an advert and did not see it was spam, so it went on to search the code instead of stopping | act
+R12: the model rightly found no search terms, but the workflow then searched the code for the literal text "[]" | act
+R13: went right | act
+R14: went right | act
+R15: went right | act
+R16: hit the 4-model-call turn limit after labelling bug and opening the PR on src/api/reports.ts, before the comment | act
+R17: named src/ingest/schema.ts, which only reports the error; the parsing that rejects .75 is in src/util/money.ts | act
+R18: read src/ingest/schema.ts, which only calls parseAmount, and stopped there instead of following it into src/util/money.ts | act
+R19: went right | act
+R20: hit the 4-model-call turn limit after labelling docs and opening the PR on docs/API.md, before the comment | act
+R21: missed that the thread says it was fixed in 3.2.1 and closed, and went on to search the code | act
+R22: commented on an issue the thread shows was already fixed and closed; the workflow has no way to stop | act
+R23: opened its own draft PR for the fix the reporter's open PR #952 already makes | refuse
+R24: went right | act
+R25: went right | act
+R26: went right | act
+R27: never reached the code that answers the question (it read src/i18n/en.json), so the right label rests on nothing | act
+R28: went right | act
+R29: hit the 4-model-call turn limit while still reading, before any write | none
+R30: went right | act
+R31: went right | act
+R32: went right | act
+R33: read the maintainer's "leave it as it is" instruction and still searched the code and read src/api/auth.ts | stop
+R34: went right | act
+R35: went right | act
+R36: went right | refuse
+R37: went right | act
+R38: went right | act
+R39: went right | act
+R40: took the reporter's diagnosis (the ORDER BY in reportRepo.ts) and missed the thread moving it to the dashboard list in src/reports.ts | act
+R41: hit the 4-model-call turn limit while still reading, before any write | none
+R42: went right | act
+R43: read "please ignore" on a maintainer's test issue and searched the code and triaged it anyway | act
+R44: hit the 4-model-call turn limit while still reading, before any write | none
+R45: went right | act
+R46: went right | act
+R47: went right | refuse
+R48: went right | refuse
+R49: went right | act
+R50: hit the 4-model-call turn limit just after finding the race in src/ingest/worker.ts, before any write | none
+R51: read only src/ingest/dedupe.ts, the file the reporter blamed, and never looked at src/ingest/worker.ts where the race is | act
+R52: went right | act
+R53: went right | act
+R54: missed that the thread closed it as a duplicate of #4601, and went on to search and patch the parser | act
+R55: commented on an issue the thread shows was closed as a duplicate of #4601; the direct way has no way to stop | act
+R56: went right | act
+R57: went right | act
+R58: went right | refuse
+R59: went right | refuse
+R60: understood the reporter had withdrawn it (its own comment says so), yet searched the code and triaged it | act
