@@ -1,0 +1,38 @@
+  j10                              pass  everything stated in the comment is supported by the issue description and the code in src
+  j20                              fail  says the readiness check is at the root of the API; health.ts only shows a route relative 
+  j21                              fail  cites import log saying 'IngestError: expected 4 fields, got 2 at row 14', which no tool r
+  j23                              fail  parsePage does not reject a pageSize above 100, it clamps it to 100 via Math.min (contradi
+  j24                              pass  the code orders by date, id ascending, but the comment says ascending when the issue says 
+  j42                              pass  src/api/errors.ts line 48 shows err.flatten().fieldErrors, and Zod's behaviour regarding u
+  j44                              pass  toPage returns items, total, page, and pageSize, and the pageCount helper exists in pagina
+  j49                              fail  cites docs/PERFORMANCE.md, a file no tool ever returned (fail line 1)
+  j01                              fail  src/api/errors.ts is not in the evidence (fail line 1)
+  j02                              fail  the comment says line 41 of src/util/dates.ts fixes the four-digit year, but line 41 is pa
+  j06                              pass  err.flatten().fieldErrors and ZodError handling are in src/api/errors.ts which was read; p
+  j07                              pass  src/api/auth.ts defines loginSchema and resetRequestSchema using z.string().email(), which
+  j08                              pass  the limits mentioned in the comment (name length 1-120, up to 50 categories of 1-60 chars,
+  j13                              fail  the comment claims that dropping a file on it today makes the browser open the CSV instead
+  j15                              pass  src/api/health.ts shows the readiness check probes db and queue, and pr-50 is the opened p
+  j16                              pass  all claims about processJob, claimNext, and parallel execution are supported by worker.ts 
+  j17                              pass  readFileConfig() in src/config.ts returns {} when fs.existsSync is false, and pr-33 is the
+  j19                              pass  readFileConfig() and its fallback behavior are in src/config.ts which was read; pr-12 is w
+  j25                              fail  cites docs/API.md, a file no tool ever returned
+  j29                              fail  the comment states the failed upload records the error `Unterminated quoted field at row 2
+  j30                              pass  startRollupSchedule, isRollupDue, src/notifications/rollup.ts, and startOfWeek in src/util
+  j31                              fail  cites formatMinor writing euro amounts with a comma, but formatMinor's implementation was 
+  j35                              pass  parseAmount uses /^\d+(\.\d+)?$/, raising errors.badAmount in schema.ts, and pr-9 was open
+  j37                              fail  the comment claims the endpoint answers 401 with missing bearer token, but health.ts and d
+  j38                              pass  the code in src/api/reports.ts shows nextRunAt is recomputed via firstRunAt(patch.schedule
+  j43                              pass  fr.json having email.export strings is shown in Call 3; scheduler.ts calling scheduledExpo
+  j47                              fail  parseAmount does not accept a trailing minus in the code shown in money.ts (lines 28-33 on
+  j48                              fail  mentions a maintainer saying on an earlier request that an empty export is a useful signal
+  j50                              pass  toDelimited() and escapeField() are in src/exportUtils.ts and use a hard-coded comma, whic
+  j51                              pass  totalsBetween and its query joining accounts on user_id and filtering by user_id and dates
+  j52                              pass  Toast.tsx uses t("ui.toast.dismiss") without a locale, and fr.json has "Fermer" for it, wh
+  j55                              fail  mentions that uploads made with a bad key are kept in quarantine folder, but no evidence s
+  j57                              fail  says rows are ordered by date ascending in listForReport, but src/db/repos/transactionRepo
+  j59                              fail  claims the parser exports a DEFAULT_DELIMITER constant, but src/ingest/parser.ts contains 
+eval/judge/tuning/round_3.jsonl: 34 judged now
+  examples: TPR 1.000, TNR 1.000
+  tuning: TPR 0.933, TNR 1.000
+  disagreements with your labels: j57
