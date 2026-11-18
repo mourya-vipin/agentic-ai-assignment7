@@ -1,0 +1,38 @@
+  j10                              pass  every fact in the comment is supported by src/api/uploads.ts, the issue description, and t
+  j20                              fail  says the readiness check is at the root of the API; health.ts only shows a route relative 
+  j21                              fail  cites import log text 'IngestError: expected 4 fields, got 2 at row 14' which no tool retu
+  j23                              fail  parsePage does not reject pageSize above 100 with a validation error; line 20 of paginatio
+  j24                              fail  the code orders by date ascending (`ORDER BY date, id`), not newest first as the comment c
+  j42                              pass  src/api/errors.ts line 48 shows err.flatten().fieldErrors, ZodError is read in src/api/err
+  j44                              pass  toPage's return value and the pageCount helper are supported by src/util/pagination.ts, an
+  j49                              fail  cites docs/PERFORMANCE.md, a file no tool ever returned (fail line 1)
+  j01                              fail  cites src/api/errors.ts, a file no tool ever returned
+  j02                              fail  cites line 41 of src/util/dates.ts as the four-digit year regex, but line 41 is part of Da
+  j06                              pass  src/api/errors.ts and ZodError handling are accurately described based on the file read, a
+  j07                              pass  src/api/auth.ts defines loginSchema and resetRequestSchema with z.string().email() on line
+  j08                              pass  all stated limits (name 1-120, up to 50 categories of 1-60 chars, 1-20 recipients) are sup
+  j13                              fail  cites console output showing an error message and behavior not present in the issue or too
+  j15                              pass  the file src/api/health.ts and pr-50 are both supported by the run's tool calls and file r
+  j16                              pass  all claims about processJob, claimNext, and pr-46 are supported by the issue thread and fi
+  j17                              pass  readFileConfig() in src/config.ts returns {} when fs.existsSync(file) is false (lines 40-4
+  j19                              pass  readFileConfig() and its behavior on missing files are in src.config.ts (lines 39-43) whic
+  j25                              fail  cites docs/API.md, a file no tool ever returned
+  j29                              fail  cites the error message 'Unterminated quoted field at row 2' which no tool returned and pa
+  j30                              pass  every fact cited in the comment regarding startRollupSchedule, isRollupDue, time zones, th
+  j31                              pass  formatMinor is imported from ./util/money in exportUtils.ts and its decimal mark usage is 
+  j35                              pass  every claim about parseAmount, its regex, the returned null, schema.ts raising errors.badA
+  j37                              fail  the comment claims the health endpoint returns 401 without a token, but src/api/health.ts 
+  j38                              pass  src/api/reports.ts shows PATCH handler recomputing nextRunAt on any schedule presence, mat
+  j43                              pass  fr.json having email.export strings, scheduler.ts calling scheduledExportEmail without loc
+  j47                              fail  parseAmount does not accept a trailing minus in its code or regex in src/util/money.ts, co
+  j48                              fail  cites a maintainer saying on an earlier request that an empty export is a useful signal, w
+  j50                              pass  toDelimited() and escapeField() are in src/exportUtils.ts and use hard-coded commas; pr-40
+  j51                              pass  all claims about totalsBetween, account scope, and single account_id filtering are support
+  j52                              pass  the comment cites src/components/Toast.tsx, t("ui.toast.dismiss"), fr.json, and pr-27, all
+  j55                              fail  mentions that uploads with a bad key are kept in the quarantine folder, which appears nowh
+  j57                              fail  the comment says rows are ordered by date ascending in transactionRepo.ts, but line 58 of 
+  j59                              fail  cites DEFAULT_DELIMITER which is not in parser.ts or any other tool result
+eval/judge/tuning/round_4.jsonl: 34 judged now
+  examples: TPR 0.750, TNR 1.000
+  tuning: TPR 0.933, TNR 0.909
+  disagreements with your labels: j24, j31, j57

@@ -119,9 +119,7 @@ A name being in the evidence is not enough; check the detail the comment attache
   the run read. A call to it, an import of it, or a search hit on its name in another file does
   not show what it does.
 - That behaviour against the code (fail line 4): read the lines and compare. "Rejects" is not
-  "clamps", "comma" is not "point". Read the code with what the language or library always does
-  (pass line 7): an SQL `ORDER BY` with no `DESC` sorts ascending, so a comment that calls it
-  ascending agrees with it.
+  "clamps", "comma" is not "point", ascending is not descending.
 - Each line number (fail line 5): count the lines of the file as it was read, or take the line a
   search result gives. The function or constant being in that file somewhere is not enough.
 - Where something is served or mounted, and what calls what (fail line 10): find the line that
