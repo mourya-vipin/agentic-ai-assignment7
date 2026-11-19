@@ -1,4 +1,4 @@
-# How the criterion's lines came about (the user's own account, recorded verbatim)
+# How the criterion's lines came about
 
 ## Lines on my first working list
 

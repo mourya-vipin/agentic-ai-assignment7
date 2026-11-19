@@ -1,4 +1,6 @@
-# Kinds of failure (the user's own grouping of review/notes.txt; recorded verbatim)
+# Kinds of failure: my grouping of the open-coding notes
+
+## Revision 1 (over notes.v1.txt)
 
 The 26 failures, grouped into named kinds
 
@@ -31,7 +33,7 @@ Answered a question without finding the answer: R27 got the right label after re
 A bug in the workflow's own code: R12 searched for the literal text "[]" when the model returned no keywords.
 Duplicated a human's work: R23 opened its own PR beside the reporter's open PR #952.
 
-## Revision 2 (after testing the grounded check against the notes): the user's table, verbatim
+## Revision 2 (over notes.txt, after testing the grounded check against the notes)
 
 | Kind | Runs | Count |
 |---|---|---|

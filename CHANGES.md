@@ -36,4 +36,4 @@ Removals are logged like additions.
 ## Assignment 7
 - **Added:** a golden set of 30 tasks in four strata, versioned, with a grounded check of each end state; five trajectory metrics; sweeps, intervals and a bar committed before the fourth sweep; the first wrong call of each failed run; an LLM judge with a criterion, hand labels, a split, a correction and a bootstrap
 - **Removed:** nothing
-- **Constrained:** a claim to the bar committed before its fourth sweep (the plan-cuts-repeats claim fails, [−0.758, −0.392]); the judge's prompt to what the examples and tuning splits showed, frozen before the test split ran
+- **Constrained:** a claim to the bar committed before its fourth sweep (the plan-cuts-repeats claim fails, [−0.758, −0.392]); the judge's prompt to what the examples and tuning sets showed, frozen before the test set ran
