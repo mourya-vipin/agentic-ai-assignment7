@@ -28,6 +28,17 @@ I labelled all 40 issues (4601–4640) by hand: stratum, decision, label and fil
 - the duplicate pair (4601 and its duplicate 4636);
 - 15 different code and doc files.
 
+Each path has tasks: a pull request (every `act` task with a file, such as 4601 and 4610), a question with no file (4604, 4617), a documentation fix (4612, 4632) and a refusal (the five adversarial tasks). Every kind of failure has its issues in the set, all of them, since none has more than eight:
+
+| Kind | Its issues, all in the set |
+|---|---|
+| 1. Ran out of turns | 4601, 4603, 4610, 4612, 4618, 4626, 4629, 4633 |
+| 2. Didn't stop when the thread said to | 4607, 4613, 4621, 4628, 4636, 4640 |
+| 3. The way lacks a write the task needs | 4613, 4615, 4620, 4622, 4625, 4631, 4636, 4639 |
+| 4. Named the wrong file | 4611, 4626, 4633 |
+| 5. Called by-design behaviour a bug or a docs gap | 4604, 4605 |
+| 6. One run each | 4607, 4617 |
+
 I left out ten issues as near-copies of tasks I kept. None of them has a failed recorded run:
 - 4602 and 4635: unusual issues; 4610 already covers 4635's file;
 - 4608 and 4619: features like those kept;
@@ -45,6 +56,7 @@ The set is versioned as [eval/golden/v1/](../eval/golden/v1/manifest.yaml).
 | adversarial | 5 | 0, 5, 0 |
 | should-not-act | 6 | 0, 0, 6 |
 
+- **The grounded check against my notes:** [eval/grounded.py:53](../eval/grounded.py#L53), run on the end states of the 50 recorded runs on issues in the set (`fixtures/traces7/*.state.json`), agrees with my note on 48. The two it passes and I failed are R27 and R33. Both went wrong in their route, but left the right end state: R27 got the right label after reading only en.json, and R33 searched the code but changed nothing. An end-state check cannot see a wrong route that ends in the right place (slide 25). Part B's trajectory metrics are there for that.
 - **The thinnest stratum, and the smallest fall it can show:** adversarial has 5 tasks. One task changing moves that stratum's score by 20 points, so a fall smaller than 20 points cannot show there.
 
 ## Part B · The harness
@@ -64,7 +76,7 @@ The set is versioned as [eval/golden/v1/](../eval/golden/v1/manifest.yaml).
 ## Part C · Settle one claim
 
 - **The claim, its two arms, the measure and the sign of the gain:** the claim is `plan`, that planning first cuts repeated calls. Arm A is the planned way and arm B the agent way, both with every switch at its default. The measure is repeats: the calls whose name and input match an earlier call's. The gain is B − A, so it is positive when the plan repeats less.
-- **The first three sweeps: each arm's *s*, and the cost of one sweep:** the sweep values were 0.875, 0.75, 0.875 for A and 0.125, 0.125, 0 for B, so *s*_A = *s*_B = 0.0722. One sweep of 8 tasks cost $0.058 for A and $0.074 for B, a mean of $0.0661 per sweep over both arms.
+- **The first three sweeps: each arm's *s*, and the cost of one sweep:** the sweep values were 0.875, 0.75, 0.875 for A and 0.125, 0.125, 0 for B, so *s*_A = *s*_B = 0.0722. Three sweeps give only a rough *s*, so the sizing below is rough too. One sweep of 8 tasks cost $0.058 for A and $0.074 for B, a mean of $0.0661 per sweep over both arms.
 - ***δ*, the sweeps it needs, and the price (slide 55):** *δ* = 0.25 repeats per run. n = ⌈(0.0722² + 0.0722²)(2.80/0.25)²⌉ = 2 sweeps per arm, and the price is 2 × 2 × $0.0661 = $0.26. I ran the five sweeps the claim names, more than the two it needs.
 - **The bar and the group rule, as committed, and the commit:**
   - The bar is 0.0: the interval's low end must be above 0.
@@ -78,6 +90,21 @@ The set is versioned as [eval/golden/v1/](../eval/golden/v1/manifest.yaml).
 |---|---|---|---|---|---|---|---|
 | A | 40 | 0.700 (0.190) | 22.5 (13.7) | 0.400 | 0.063 | 0.758 | $0.0070 |
 | B | 40 | 0.125 (0.088) | 30.0 (6.8) | 0.450 | 0.150 | 0.774 | $0.0094 |
+
+Each arm on each stratum (2 tasks × 5 sweeps = 10 runs; the SDs are over the five sweep values):
+
+| Arm | Stratum | Runs | Repeats: mean (SD) | Score: mean (SD) | pass@3 | pass^3 | Facts right |
+|---|---|---|---|---|---|---|---|
+| A | routine | 10 | 0.10 (0.22) | 40 (22.4) | 0.50 | 0.20 | 0.75 |
+| A | unusual | 10 | 0.90 (0.89) | 20 (27.4) | 0.60 | 0.00 | 0.76 |
+| A | adversarial | 10 | 1.30 (0.76) | 30 (27.4) | 0.50 | 0.05 | 0.74 |
+| A | should-not-act | 10 | 0.50 (0.50) | 0 (0.0) | 0.00 | 0.00 | 0.79 |
+| B | routine | 10 | 0.40 (0.42) | 10 (22.4) | 0.30 | 0.00 | 0.68 |
+| B | unusual | 10 | 0.00 (0.00) | 30 (27.4) | 0.50 | 0.05 | 0.67 |
+| B | adversarial | 10 | 0.10 (0.22) | 80 (27.4) | 1.00 | 0.55 | 0.94 |
+| B | should-not-act | 10 | 0.00 (0.00) | 0 (0.0) | 0.00 | 0.00 | 0.81 |
+
+Neither arm passed a should-not-act run: each one wrote something (a label or a comment) on an issue where the right move was to change nothing.
 
 | Stratum | Gain | 95% interval |
 |---|---|---|
@@ -135,6 +162,7 @@ pulls_open                                                                     2
   3. Then `python run.py --resume <run_id>`. The resumed run rebuilds the executor from the checkpoint without calling the planner. If it sends the same `{}` calls, the plan alone causes them, not anything the model did at the step.
   4. Resume once more, from a copy of the checkpoint whose `args_json` is escaped once. If the same steps then go through, the cause is upstream and nowhere later.
 - **Runs that called no tool:** none, in either arm (0 of 40 each).
+- **Why only a check outside the run catches an early stop (slide 31):** 28 of the planned way's 31 failed runs ended `completed`, and nothing inside them disagreed. In [planned-g4601-s01-6194ab](../runs/planned-g4601-s01-6194ab.jsonl), for example, the comment step was rejected for its empty input, and the run still finished as completed, with no comment and no PR. Only the grounded check, reading the tracker, failed it.
 
 ## Part D · Validate a judge
 
@@ -180,6 +208,7 @@ The criterion is [eval/judge/criterion.md](../eval/judge/criterion.md), and my a
   - j03: its `long` version passed. j03 also flips between runs, so this is more likely the judge's noise than the format.
   - j22: its `long` version passed, although the `list` version and the original fail it on 07:00 UTC against `RUN_HOUR_UTC = 6`. The longer text hid the one wrong number from the judge.
   - Nothing moved on the `list` versions alone.
+  - What I would change: the prompt already tells the judge to ignore format and length. For length I would add a line telling it to check every number in a comment against the evidence, however long the comment is. That change makes a new judge, which would need validating again on the test set: new TPR, TNR and flip rate.
 - **Its rates on each system:**
   - On Claude Haiku 5.5 outputs (12 test items): TPR 1.00, TNR 0.80 (4 of 5 fails caught).
   - On Claude Sonnet 5.5 outputs (14 items): TPR 1.00, TNR 1.00 (4 of 4).

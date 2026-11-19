@@ -34,6 +34,6 @@ Removals are logged like additions.
 - **Constrained:** multi-agent decomposition, measured against one agent at the same budget and not merged; RepoMind stays one agent
 
 ## Assignment 7
-- **Added:** a golden set of 30 tasks in four strata, versioned, with a grounded check of each end state; five trajectory metrics; sweeps, intervals and a bar committed before the fourth sweep; the first wrong call of each failed run; an LLM judge with a criterion, hand labels, a split, a correction and a bootstrap
-- **Removed:** nothing
-- **Constrained:** a claim to the bar committed before its fourth sweep (the plan-cuts-repeats claim fails, [−0.758, −0.392]); the judge's prompt to what the examples and tuning sets showed, frozen before the test set ran
+- **Added:** an evaluation harness: a golden set of 30 tasks in four strata, versioned, with a grounded check of each end state; runs, spread, pass@k and pass^k; five trajectory metrics by counting; the first wrong call of each failed run; an LLM judge validated against hand labels, with its rate corrected and bootstrapped
+- **Removed:** single-run claims
+- **Constrained:** every later claim, to a run count, a spread and a bar set in advance (here the plan-cuts-repeats claim, five sweeps per arm, fails at [−0.758, −0.392]); the judge, to a frozen prompt validated on a held-out test set
